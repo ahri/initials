@@ -5,7 +5,6 @@ eat all@(l:str)
     | otherwise = chew all
 
 chew :: String -> String
-chew "" = ""
 chew (l:str) = [l] ++ munch str
 
 munch :: String -> String
