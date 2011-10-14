@@ -1,14 +1,14 @@
 eat :: String -> String
 eat "" = ""
-eat all@(l:str)
-    | l == ' ' = eat str
+eat all@(char:string)
+    | char == ' ' = eat string
     | otherwise = chew all
 
 chew :: String -> String
-chew (l:str) = [l] ++ munch str
+chew (letter:word) = [letter] ++ munch word
 
 munch :: String -> String
 munch "" = ""
-munch (l:str)
-    | l == ' ' = eat str
-    | otherwise = munch str
+munch (char:string)
+    | char == ' ' = eat string
+    | otherwise = munch string
